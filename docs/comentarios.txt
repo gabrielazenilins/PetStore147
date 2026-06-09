@@ -1,0 +1,31 @@
+Testes de API / Serviços / Integração de Sistemas
+ 
+O que é uma API?
+Interface de comunicação e processamento entre aplicações/Sistemas
+ 
+Tipos de API:
+- Web Services: XML --> Correios (Consultar Preço e Prazo)
+- REST/RESTfull: JSON --> IFood, Uber
+ 
+Tipos de Documentação:
+- Nenhuma
+- Manual
+- Manual convertida/traduzida
+- Documentação automática (Swagger)
+ 
+Como faremos aqui no curso?
+Ok - Realizar testes direto no Swagger (quase dizer que é manual)
+Ok - Realizar testes via Postman (quase dizer que é por configuração)
+- Realizar testes via Playwright (por programação)
+ 
+Operações básicas de uma entidade
+ 
+programação                 API (foco em teste)
+(C) Create - Incluir        Post
+(R) Read - Consultar        Get
+(U) Updade - Atualizar      Put
+(D) Delete - Excluir        Delete
+ 
+Além disso no Playwright, faremos também:
+- DDT - Data Driven Tests (usar uma massa de teste: csv, json) --> Json Dinâmico
+- Extração de token e simulação de uso

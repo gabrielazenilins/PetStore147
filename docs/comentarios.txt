@@ -29,3 +29,4 @@ programação                 API (foco em teste)
 Além disso no Playwright, faremos também:
 - DDT - Data Driven Tests (usar uma massa de teste: csv, json) --> Json Dinâmico
 - Extração de token e simulação de uso
+response

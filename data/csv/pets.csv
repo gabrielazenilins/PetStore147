@@ -1,0 +1,3 @@
+id,categoryId,categoryName,name,photoUrls,tags,status
+996034601,1,gato,Garfield,url1:url2,1;vacinado:9;vermifugado,available
+996034602,1,cachorro,Snoopy,url1:url2,1;vacinado:9;vermifugado,sold

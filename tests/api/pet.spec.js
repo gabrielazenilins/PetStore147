@@ -91,9 +91,9 @@ test.describe.serial('Testes positivos da entidade Pet', async () => {
     massa.forEach(linha => {
         test(`POST pet DDT - ${linha.name}`, async ({ request }) => {
             const pet = {}
-            pet.id = linha.id
+            pet.id = parseInt(linha.id)
             pet.category = {}
-            pet.category.id = linha.categoryId
+            pet.category.id = parseInt(linha.categoryId)
             pet.category.name = linha.categoryName
             pet.name = linha.name
             pet.photoUrls = linha.photoUrls.split(':') // ['url1', 'url2']
@@ -104,13 +104,21 @@ test.describe.serial('Testes positivos da entidade Pet', async () => {
                 // '1;vacinado'
                 let tagFormatada = tag.split(';') // ['1', 'vacinado']
                 let novaTag = {
-                    id: tag[0],
-                    name: tag[1]
+                    id:parseInt(tagFormatada[0]),
+                    name: tagFormatada[1]
                 }
                 pet.tags.push(novaTag)
             })
             pet.status = linha.status
- 
+            console.log(pet)
+
+            const response= await request.post('pet',{
+
+            data:pet
+
+            } )
+            expect(response.status()).toBe(200)
+            expect(await response.json()).toEqual(pet)
         })
     })
 })
